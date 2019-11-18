@@ -1,0 +1,15 @@
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp.deps.json
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp.runtimeconfig.json
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp.runtimeconfig.dev.json
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp.dll
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/ConsoleApp.pdb
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/StatemeentProcessor.dll
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/StatemeentProcessor.pdb
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.csprojAssemblyReference.cache
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.AssemblyInfo.cs
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.csproj.CopyComplete
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.dll
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/obj/Debug/netcoreapp3.0/ConsoleApp.pdb
+/Users/shankar/Projects/dotnetCore/Citi-Statement/ConsoleApp/bin/Debug/netcoreapp3.0/CsvHelper.dll

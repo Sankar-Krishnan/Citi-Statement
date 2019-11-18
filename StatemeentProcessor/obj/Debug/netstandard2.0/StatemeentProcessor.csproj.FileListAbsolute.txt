@@ -1,0 +1,8 @@
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/bin/Debug/netstandard2.0/StatemeentProcessor.deps.json
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/bin/Debug/netstandard2.0/StatemeentProcessor.dll
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/bin/Debug/netstandard2.0/StatemeentProcessor.pdb
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/obj/Debug/netstandard2.0/StatemeentProcessor.csprojAssemblyReference.cache
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/obj/Debug/netstandard2.0/StatemeentProcessor.AssemblyInfoInputs.cache
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/obj/Debug/netstandard2.0/StatemeentProcessor.AssemblyInfo.cs
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/obj/Debug/netstandard2.0/StatemeentProcessor.dll
+/Users/shankar/Projects/dotnetCore/Citi-Statement/StatemeentProcessor/obj/Debug/netstandard2.0/StatemeentProcessor.pdb
