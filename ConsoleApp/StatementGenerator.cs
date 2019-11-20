@@ -50,7 +50,7 @@ namespace ConsoleApp
             Console.WriteLine("Total Card: {0}", totalCard.ToString("##.##"));
             Console.WriteLine("Other: {0}", others);
 
-            using (var writer = new StreamWriter(@"/Users/shankar/Documents/Personal Documents/Banking/Statements/output.csv"))
+            using (var writer = new StreamWriter(@"/Users/shankar/Documents/Personal Documents/Banking/Statements/output/output.csv"))
             {
                 using (var csv = new CsvWriter(writer))
                 {

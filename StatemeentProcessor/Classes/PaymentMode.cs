@@ -7,7 +7,6 @@ namespace StatemeentProcessor {
         DebitCard,
         ATMWithdrawl,
         StandingInstruction,
-        Others,
-        Test
+        Others
     }
 }
