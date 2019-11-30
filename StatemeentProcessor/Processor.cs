@@ -19,12 +19,12 @@ namespace StatemeentProcessor
 
                 if (row.Description.StartsWith("IMPS OUTWARD ORG UPI"))
                 {
-                    var entries = row.Description.Split(',');
+                    var entries = row.Description.Split("REF NO");
 
-                    detail.To = row.Description.Split(',')[0].Replace("IMPS OUTWARD ORG UPI To ", "");
-                    detail.Desc = entries[entries.Length - 1];
+                    detail.To = entries[0].Replace("IMPS OUTWARD ORG UPI To", "").Trim();
+                    detail.Desc = CleanUPIDesc(entries[entries.Length - 1].Trim());
                     detail.Amount = row.Deposits.HasValue ? row.Deposits.Value : 0;
-                    detail.PaymentMode = PaymentMode.IMPS;
+                    detail.PaymentMode = PaymentMode.UPI;
 
                     details.Add(detail);
                 }
@@ -39,7 +39,19 @@ namespace StatemeentProcessor
                     refIndex = 0;
                     detail.Desc = desc.Substring(refIndex, (int)desc.LastIndexOf("-") - 1);
                     detail.Amount = row.Deposits.HasValue ? row.Deposits.Value : 0;
-                    detail.PaymentMode = PaymentMode.IMPS;
+
+                    if (detail.Desc == "Transfer to Self")
+                    {
+                        detail.PaymentMode = PaymentMode.Self;
+                    }
+                    else if (detail.Desc == "Transfer to Family or Friends")
+                    {
+                        detail.PaymentMode = PaymentMode.Family;
+                    }
+                    else
+                    {
+                        detail.PaymentMode = PaymentMode.IMPS;
+                    }
 
                     details.Add(detail);
                 }
@@ -93,10 +105,19 @@ namespace StatemeentProcessor
 
                         details.Add(detail);
                     }
-                }                
+                }
             }
 
             return details;
+        }
+
+        private string CleanUPIDesc(string input)
+        {
+            var output = Regex.Replace(input.Trim(), @"^[\d-]*\s*", string.Empty);
+
+            output = Regex.Replace(output, @"^[\d-]*\s*", string.Empty);
+
+            return output;
         }
     }
 }

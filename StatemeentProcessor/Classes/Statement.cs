@@ -1,13 +1,15 @@
 //Date,Description,Withdrawals,Deposits,Balance
 using System;
 
-namespace StatemeentProcessor.Classes {
-    public class StatementRow {
-        public DateTime Date {get;set;}
-        public string Description {get;set;}
-        public double? Withdrawals {get;set;}
-        public double? Deposits {get;set;}
-        public double? Balance {get;set;}
+namespace StatemeentProcessor.Classes
+{
+    public class StatementRow
+    {
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
+        public double? Withdrawals { get; set; }
+        public double? Deposits { get; set; }
+        public double? Balance { get; set; }
 
         // public decimal GetWithdrawals {
         //     get{

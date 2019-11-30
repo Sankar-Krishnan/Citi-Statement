@@ -14,7 +14,7 @@ namespace ConsoleApp
         public void StartProcessing()
         {
             string directoryName = @"/Users/shankar/Documents/Personal Documents/Banking/Statements";
-            var files = System.IO.Directory.GetFiles(directoryName, "*.csv");
+            var files = System.IO.Directory.GetFiles(directoryName, "*.csv").Where(a => a.Contains("Savings_Stmt_Sep_Nov.csv"));
 
             List<StatementDetails> statementResults = new List<StatementDetails>();
 
@@ -29,7 +29,7 @@ namespace ConsoleApp
             foreach (var s in statementResults.OrderByDescending(a => (int)a.PaymentMode))
             {
 
-                Console.WriteLine(string.Format("To: {0}, Desc: {1}, Amt: {2}", s.To, s.Desc, s.Amount));
+                //Console.WriteLine(string.Format("To: {0}, Desc: {1}, Amt: {2}", s.To, s.Desc, s.Amount));
 
                 // if (s.PaymentMode == PaymentMode.IMPS) {
                 //     //Console.WriteLine(string.Format("To: {0}, Desc: {1}, Amt: {2}", s.To, s.Desc, s.Amount));
@@ -79,9 +79,9 @@ namespace ConsoleApp
                     StatementRow row = new StatementRow();
                     row.Date = Convert.ToDateTime(DateTime.ParseExact(values[0], "dd/MM/yyyy", CultureInfo.InvariantCulture));
                     row.Description = values[1];
-                    row.Deposits = values[2] != "" ? Convert.ToDouble(values[2].Replace(",", string.Empty)) : 0.0;
-                    row.Withdrawals = values[3] != "" ? Convert.ToDouble(values[3].Replace(",", string.Empty)) : 0.0;
-                    row.Balance = values[4] != "" ? Convert.ToDouble(values[4].Replace(",", string.Empty)) : 0.0;
+                    row.Deposits = values[2] != "" ? CleanNumericData(values[2].Replace(",", string.Empty)) : 0.0;
+                    row.Withdrawals = values[3] != "" ? CleanNumericData(values[3].Replace(",", string.Empty)) : 0.0;
+                    row.Balance = values[4] != "" ? CleanNumericData(values[4].Replace(",", string.Empty)) : 0.0;
 
                     statement.Add(row);
                     //Console.WriteLine("Row {0} has {1} values.", reader.RowIndex, values.Length);
@@ -89,7 +89,19 @@ namespace ConsoleApp
             }
 
             return statement;
-
         }
+
+        private double CleanNumericData(string input)
+        {
+            double output = 0;
+            if (Double.TryParse(input, out output))
+            {
+                return output;
+            }
+
+            return output;
+        }
+
+
     }
 }

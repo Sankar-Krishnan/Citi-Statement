@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Bill Payments",
+        "Filters": "test"
+    },
+    {
+        "Name": "Credit Card Bill",
+        "Filters": "Payment for Credit Card"
+    },
+    {
+        "Name": "To Family",
+        "Filters": "ASOKAN"
+    }
+]
